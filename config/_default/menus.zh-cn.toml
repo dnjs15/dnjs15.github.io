@@ -1,0 +1,47 @@
+# -- Main Menu --
+# 有子项的菜单会自动渲染为折叠下拉分类
+
+[[main]]
+  name = "主页"
+  pageRef = "/"
+  weight = 1
+
+[[main]]
+  name = "博客"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "标签"
+  parent = "博客"
+  pageRef = "tags"
+  weight = 11
+
+[[main]]
+  name = "分类"
+  parent = "博客"
+  pageRef = "categories"
+  weight = 12
+
+[[main]]
+  name = "关于"
+  pageRef = "about"
+  weight = 20
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/dnjs15"
+  weight = 300
+
+# -- Footer Menu --
+
+[[footer]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
+  name = "分类"
+  pageRef = "categories"
+  weight = 20

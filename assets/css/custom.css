@@ -1,0 +1,11 @@
+/* 自定义样式 —— 会自动被 Blowfish 加载 */
+
+/* 全站背景图透明度：数值越小越淡，按需调整 (0.0 ~ 1.0) */
+#background-canvas img {
+  opacity: 0.35;
+}
+
+/* 主页 profile 布局的背景图同样降透明度（如启用了 homepageImage） */
+#background-image {
+  opacity: 0.35;
+}

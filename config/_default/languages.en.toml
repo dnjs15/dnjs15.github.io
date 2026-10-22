@@ -1,0 +1,21 @@
+locale = "en"
+label = "English"
+weight = 2
+title = "Coinsheep"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Security research & tech notes"
+
+[params.author]
+  name = "Coinsheep"
+  image = "img/avatar.jpg"
+  email = "2509432917@qq.com"
+  headline = "A half-baked troublemaker"
+  bio = "Security research · CTF · tinkering"
+  links = [
+    { github = "https://github.com/dnjs15" },
+  ]
