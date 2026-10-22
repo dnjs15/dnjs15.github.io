@@ -29,6 +29,16 @@
   weight = 20
 
 [[main]]
+  name = "友链"
+  pageRef = "links"
+  weight = 30
+
+[[main]]
+  name = "团队"
+  url = "http://www.lrtctf.top:50082/"
+  weight = 40
+
+[[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/dnjs15"
