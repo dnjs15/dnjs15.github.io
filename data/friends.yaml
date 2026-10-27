@@ -1,0 +1,7 @@
+# 友链列表（渲染成卡片：站点头像 + 昵称 + 一句话介绍）
+# avatar 为 assets/ 下的相对路径，留空则显示昵称首字母占位
+
+- name: Bin9chn
+  url: https://bin9chn.github.io/
+  description: 网络安全研究与工程项目笔记，关注协议安全、离线数据处理和密码学工具
+  avatar: img/friends/bin9chn.jpg

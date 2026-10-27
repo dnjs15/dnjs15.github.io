@@ -1,0 +1,41 @@
+{{/* 友链卡片：数据来自 data/friends.yaml
+   使用方：layouts/shortcodes/friends.html（友链页）、layouts/partials/related.html（文章底部）
+   样式在 assets/css/custom.css 的「友链卡片」一节（不走 Tailwind，避免依赖编译产物） */}}
+{{ $friends := site.Data.friends }}
+{{ with $friends }}
+  <div class="friend-grid not-prose">
+    {{ range . }}
+      {{ $avatar := "" }}
+      {{ with .avatar }}
+        {{ with resources.Get . }}
+          {{ $avatar = (.Fill "112x112 Center webp q90").RelPermalink }}
+        {{ end }}
+      {{ end }}
+      <a
+        class="friend-card"
+        href="{{ .url }}"
+        target="_blank"
+        rel="noopener noreferrer external"
+        title="{{ .name }}">
+        {{ if $avatar }}
+          <img
+            class="friend-card__avatar nozoom"
+            src="{{ $avatar }}"
+            alt="{{ .name }}"
+            width="52"
+            height="52"
+            loading="lazy"
+            decoding="async" />
+        {{ else }}
+          <span class="friend-card__avatar friend-card__avatar--placeholder">{{ substr .name 0 1 }}</span>
+        {{ end }}
+        <span class="friend-card__body">
+          <span class="friend-card__name">
+            {{ .name }}<span class="friend-card__arrow">&#8599;</span>
+          </span>
+          <span class="friend-card__desc">{{ .description }}</span>
+        </span>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}
