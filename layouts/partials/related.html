@@ -1,8 +1,0 @@
-{{/* 覆盖主题的「相关文章」：文章底部改为友链卡片，数据见 data/friends.yaml
-   仅限 posts section，避免友链页/关于页重复出现 */}}
-{{ if eq .Section "posts" }}
-  {{ with site.Data.friends }}
-    <h2 class="mt-8 mb-10 text-2xl font-extrabold">友链</h2>
-    {{ partial "friend-cards.html" $ }}
-  {{ end }}
-{{ end }}
