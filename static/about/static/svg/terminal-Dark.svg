@@ -1,0 +1,142 @@
+<svg viewBox="-16 -32 880 192" width="880" height="192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes scan { 0% { transform: translateY(-32px); } 100% { transform: translateY(160px); } }
+      @keyframes fadeIn1 { 0%, 5% { opacity: 0; } 10%, 100% { opacity: 1; } }
+      @keyframes fadeIn2 { 0%, 15% { opacity: 0; } 20%, 100% { opacity: 1; } }
+      @keyframes fadeIn3 { 0%, 25% { opacity: 0; } 30%, 100% { opacity: 1; } }
+      @keyframes fadeIn4 { 0%, 35% { opacity: 0; } 40%, 100% { opacity: 1; } }
+      @keyframes fadeIn5 { 0%, 45% { opacity: 0; } 50%, 100% { opacity: 1; } }
+      @keyframes fadeIn6 { 0%, 55% { opacity: 0; } 60%, 100% { opacity: 1; } }
+      @keyframes fadeIn7 { 0%, 65% { opacity: 0; } 70%, 100% { opacity: 1; } }
+      @keyframes fadeIn8 { 0%, 75% { opacity: 0; } 80%, 100% { opacity: 1; } }
+      
+      .terminal-text { font-family: 'Consolas', monospace; font-size: 8px; }
+      .cursor-blink { animation: blink 1s infinite; }
+      .scanline { animation: scan 5s linear infinite; }
+      .line1 { animation: fadeIn1 8s ease-in-out infinite; }
+      .line2 { animation: fadeIn2 8s ease-in-out infinite; }
+      .line3 { animation: fadeIn3 8s ease-in-out infinite; }
+      .line4 { animation: fadeIn4 8s ease-in-out infinite; }
+      .line5 { animation: fadeIn5 8s ease-in-out infinite; }
+      .line6 { animation: fadeIn6 8s ease-in-out infinite; }
+      .line7 { animation: fadeIn7 8s ease-in-out infinite; }
+      .line8 { animation: fadeIn8 8s ease-in-out infinite; }
+    </style>
+    <linearGradient id="terminalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1419;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#05070a;stop-opacity:0.95" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00f2ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00f2ff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Grid pattern (subtle background) -->
+  <g opacity="0.02">
+    <path d="M-16,-32 L864,-32 M-16,-12 L864,-12 M-16,8 L864,8 M-16,28 L864,28 M-16,48 L864,48 M-16,68 L864,68 M-16,88 L864,88 M-16,108 L864,108 M-16,128 L864,128 M-16,148 L864,148" 
+          stroke="#00f2ff" stroke-width="0.3" fill="none"/>
+    <path d="M-16,-32 L-16,160 M84,-32 L84,160 M184,-32 L184,160 M284,-32 L284,160 M384,-32 L384,160 M484,-32 L484,160 M584,-32 L584,160 M684,-32 L684,160 M784,-32 L784,160" 
+          stroke="#00f2ff" stroke-width="0.3" fill="none"/>
+  </g>
+  
+  <!-- Terminal Window (full size) -->
+  <rect x="-16" y="-32" width="880" height="192" rx="3" fill="url(#terminalBg)" stroke="#00f2ff" stroke-width="0.6" opacity="0.95"/>
+  
+  <!-- Terminal Header -->
+  <rect x="-16" y="-32" width="880" height="18" rx="3" fill="#1a1f2e" opacity="0.9"/>
+  <circle cx="-4" cy="-23" r="2.5" fill="#ff5f56"/>
+  <circle cx="8" cy="-23" r="2.5" fill="#ffbd2e"/>
+  <circle cx="20" cy="-23" r="2.5" fill="#27c93f"/>
+  <text x="424" y="-19" text-anchor="middle" class="terminal-text" fill="#00f2ff" opacity="0.6" font-size="6">CYBER-TERMINAL v2.1</text>
+  
+  <!-- Terminal Content with staggered animations -->
+  <g class="terminal-text" fill="#00f2ff">
+    <!-- Line 1: Initial prompt -->
+    <g class="line1">
+      <text x="0" y="5" fill="#10b981">root@local:~$</text>
+      <text x="130" y="5" fill="#ffffff">ssh admin@192.168.1.100</text>
+    </g>
+    
+    <!-- Line 2: Connecting -->
+    <g class="line2">
+      <text x="0" y="25" opacity="0.8">&gt; Connecting to target...</text>
+    </g>
+    
+    <!-- Line 3: Connected -->
+    <g class="line3">
+      <text x="0" y="45" fill="#10b981">[✓] Connection established</text>
+    </g>
+    
+    <!-- Line 4: Exploit command -->
+    <g class="line4">
+      <text x="0" y="65" fill="#10b981">admin@target:~$</text>
+      <text x="150" y="65" fill="#ffffff">exploit --cve-2024-1337</text>
+    </g>
+    
+    <!-- Line 5: Exploiting -->
+    <g class="line5">
+      <text x="0" y="85" fill="#f59e0b">&gt; Injecting payload...</text>
+    </g>
+    
+    <!-- Line 6: Privilege escalation -->
+    <g class="line6">
+      <text x="0" y="105" fill="#f59e0b">&gt; Escalating privileges...</text>
+    </g>
+    
+    <!-- Line 7: Success -->
+    <g class="line7">
+      <text x="0" y="125" fill="#10b981">[✓] Root access granted</text>
+    </g>
+    
+    <!-- Line 8: Root prompt with cursor -->
+    <g class="line8">
+      <text x="0" y="145" fill="#ef4444">root@target:~#</text>
+      <rect x="135" y="138" width="4" height="10" fill="#00f2ff" class="cursor-blink"/>
+    </g>
+  </g>
+  
+  <!-- Connection visualization -->
+  <g opacity="0.5">
+    <!-- Local node -->
+    <circle cx="700" cy="30" r="20" fill="url(#nodeGlow)" opacity="0.3"/>
+    <circle cx="700" cy="30" r="12" fill="none" stroke="#00f2ff" stroke-width="0.7" stroke-dasharray="3 3">
+      <animateTransform attributeName="transform" type="rotate" from="0 700 30" to="360 700 30" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="30" r="4" fill="#00f2ff" filter="url(#glow)"/>
+    <text x="700" y="55" text-anchor="middle" class="terminal-text" fill="#00f2ff" opacity="0.7" font-size="6">LOCAL</text>
+    
+    <!-- Target node -->
+    <circle cx="700" cy="120" r="20" fill="url(#nodeGlow)" opacity="0.3"/>
+    <circle cx="700" cy="120" r="12" fill="none" stroke="#ef4444" stroke-width="0.7" stroke-dasharray="3 3">
+      <animateTransform attributeName="transform" type="rotate" from="360 700 120" to="0 700 120" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="120" r="4" fill="#ef4444" filter="url(#glow)"/>
+    <text x="700" y="145" text-anchor="middle" class="terminal-text" fill="#ef4444" opacity="0.7" font-size="6">TARGET</text>
+    
+    <!-- Connection path -->
+    <path d="M 700 42 Q 750 75 700 108" stroke="#00f2ff" stroke-width="1" fill="none" opacity="0.2" stroke-dasharray="500" stroke-dashoffset="500">
+      <animate attributeName="stroke-dashoffset" from="500" to="0" dur="3s" begin="0s" fill="freeze"/>
+    </path>
+    
+    <!-- Data packets -->
+    <circle r="2.5" fill="#00f2ff" filter="url(#glow)">
+      <animateMotion dur="2.5s" repeatCount="indefinite" path="M 700 42 Q 750 75 700 108"/>
+    </circle>
+    <circle r="2.5" fill="#00f2ff" filter="url(#glow)">
+      <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.8s" path="M 700 42 Q 750 75 700 108"/>
+    </circle>
+    <circle r="2.5" fill="#00f2ff" filter="url(#glow)">
+      <animateMotion dur="2.5s" repeatCount="indefinite" begin="1.6s" path="M 700 42 Q 750 75 700 108"/>
+    </circle>
+  </g>
+  
+  <!-- Scanline effect -->
+  <rect x="-16" y="-32" width="880" height="1.2" fill="#00f2ff" opacity="0.08" class="scanline"/>
+</svg>

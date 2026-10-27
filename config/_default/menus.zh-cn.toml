@@ -25,7 +25,7 @@
 
 [[main]]
   name = "关于"
-  pageRef = "about"
+  url = "/about/"
   weight = 20
 
 [[main]]
