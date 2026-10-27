@@ -4,7 +4,7 @@ date: 2026-10-22T19:00:00+08:00
 draft: false
 description: "CVE-2026-109618 / CVE-2026-109619 复现与原理浅析"
 tags: ["PHP", "漏洞分析", "RCE"]
-categories: ["安全研究"]
+categories: ["技术笔记"]
 ---
 
 # 前言

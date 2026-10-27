@@ -1,7 +1,7 @@
 {
   "name": "Coinsheep",
   "short_name": "Coinsheep",
-  "description": "安全研究与技术笔记",
+  "description": "CTF · 技术折腾的笔记",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

@@ -5,7 +5,7 @@ lastmod: 2026-10-27T11:20:00+08:00
 draft: false
 description: "Web 安全入门扫盲：子域名、端口、目录、数据库、OSS、加密、前后端分离、站点搭建、WAF/CDN、抓包、堡垒机、API、APP、出入站、反弹 Shell、小程序与公众号"
 tags: ["Web安全","基础"]
-categories: ["安全研究"]
+categories: ["技术笔记"]
 ---
 
 # 前言

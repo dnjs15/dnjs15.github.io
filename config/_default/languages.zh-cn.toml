@@ -8,7 +8,7 @@ title = "Coinsheep"
   isoCode = "zh-cn"
   rtl = false
   dateFormat = "2006-01-02"
-  description = "安全研究与技术笔记"
+  description = "CTF · 技术折腾的笔记"
 
 [params.author]
   name = "Coinsheep"
