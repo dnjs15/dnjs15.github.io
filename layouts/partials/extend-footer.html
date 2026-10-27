@@ -1,0 +1,10 @@
+{{/* 页脚浏览量：低调的一行小字，JS 每 30s 轮询一次做近似实时更新（assets/js/views.js） */}}
+{{ $js := resources.Get "js/views.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<div class="mt-6 flex justify-center print:hidden">
+  <span class="views-counter" data-views="site" title="本站累计浏览量">
+    {{ partial "icon.html" "eye" }}
+    <span class="views-counter__num" data-views-num>0</span>
+    <span class="views-counter__unit">次浏览</span>
+  </span>
+</div>
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
