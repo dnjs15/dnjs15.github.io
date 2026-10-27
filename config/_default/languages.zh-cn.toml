@@ -15,7 +15,7 @@ title = "Coinsheep"
   image = "img/avatar.jpg"
   email = "2509432917@qq.com"
   headline = "半吊子和不学无术的坏孩子"
-  bio = "安全研究 · CTF · 技术折腾"
+  bio = "CTF · 技术折腾"
   links = [
     { github = "https://github.com/dnjs15" },
   ]
